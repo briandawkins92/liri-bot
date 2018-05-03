@@ -30,6 +30,13 @@ if (command1 === 'my-tweets'){
     )
 };
 if (command1 === 'spotify-this-song'){
-    
+   spotify.search({type: 'track', query: parameter, limit: 1})
+   .then(function (response){
+    console.log(response.tracks.items[0].artists[0].name);
+       console.log(response.tracks.items[0].name);
+       console.log(response.tracks.items[0].external_urls);
+       console.log(response.tracks.items[0].album.name);
+       
+   })
 
 }
