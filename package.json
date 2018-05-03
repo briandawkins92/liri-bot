@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/briandawkins92/liri-bot/issues"
   },
-  "homepage": "https://github.com/briandawkins92/liri-bot#readme"
+  "homepage": "https://github.com/briandawkins92/liri-bot#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "keys.js": "^1.0.2",
+    "node-spotify-api": "^1.0.7",
+    "twitter": "^1.7.1"
+  }
 }
