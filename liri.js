@@ -62,26 +62,23 @@ function doWhatItSays() {
         fs.readFile('random.txt', "utf8", function (err, data) {
             var splitData = (data.split(','));
             command1 = splitData[0];
-            console.log(command1);
             multiString = splitData[1];
-            console.log(multiString);
-
             if (command1 === 'spotify-this-song') {
                 spotifyProgram();
             }
             if (command1 === 'movie-this') {
                 omdbProgram();
             }
-            if (command1 === 'my-tweets'){
+            if (command1 === 'my-tweets') {
                 tweetProgram();
             }
         })
     }
 }
-if (multiString === "undefined" && command1 === 'movie-this'){
- 
+if (multiString === undefined && command1 === 'movie-this') {
+    multiString = "Mr. Nobody";
 }
-if (multiString != "undefined" && command1 === 'spotify-this-song'){
+if (multiString === undefined && command1 === 'spotify-this-song') {
     multiString = "Ace of Base";
 }
 
